@@ -1,0 +1,171 @@
+/**
+ * Created by zhenglu on 1/07/2017.
+ */
+@import url(baseStyleSheet.css);
+
+body, html{
+    background-color: #eaeced;
+    height: 100%;
+    border-top: 2px solid #fc0;
+}
+
+/*style in header*/
+header{
+    position: relative;
+    width: 100%;
+    height: 150px;
+    background-color: #2b2b2b;
+}
+header h1{
+    color: #eaeced;
+    font-size: 40px;
+    position: absolute;
+    bottom: 59px;
+    left: 150px;
+}
+header a{
+    text-decoration: none;
+    color: #bfbfbf;
+    font-size: 26px;
+    margin-right: 20px;
+}
+header p{
+    color: #bfbfbf;
+    position: absolute;
+    bottom: 27px;
+    left: 153px;
+    font-size: 18px;
+}
+header .current{
+    color: #fc0;
+}
+header nav{
+    position: absolute;
+    bottom: 10px;
+    right: 80px;
+}
+
+/*style in mainbody*/
+#mainBody{
+    overflow: hidden;
+    margin-top: 30px;
+    margin-left: 40px;
+}
+
+/*public style for both overall and individual*/
+.left{
+    width: 40%;
+    float: left;
+    margin-top: 24px;
+    margin-left: 20px;
+}
+.right{
+    width: 50%;
+    float: right;
+    margin-right: 50px;
+}
+
+
+/*overall*/
+
+/*individual*/
+#individual{
+    display: none;
+}
+
+/*style about charts*/
+.charts{
+    width: 50%;
+    float: right;
+    margin-right: 50px;
+}
+.charts .tag{
+    height: 50px;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.charts .tag .chartsTag{
+    display: inline-block;
+    margin-right: 20px;
+    color: #222;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 18px;
+}
+.charts .tag .select{
+    background: #fc0;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.5), 0 1px 5px rgba(0,0,0,.5);
+    text-shadow: 0 1px 0 rgba(255,255,255,.3);
+    border-radius: 5px;
+    cursor: default;
+}
+.bar{
+    width: 730px;
+    height: 400px;
+}
+.pie{
+    width: 600px;
+    height: 400px;
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*style in footer*/
+footer{
+    position: absolute;
+    bottom: -215px;
+    width: 100%;
+    height: 180px;
+    background-color: #2b2b2b;
+    font-size: 14px;
+}
+
+
+/*for css loading animation*/
+.spinner {
+    margin: 100px auto 0;
+    width: 70px;
+    text-align: center;
+}
+.spinner > div {
+    width: 18px;
+    height: 18px;
+    background-color: #333;
+
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+    0%, 80%, 100% { -webkit-transform: scale(0) }
+    40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bouncedelay {
+    0%, 80%, 100% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    } 40% {
+          -webkit-transform: scale(1.0);
+          transform: scale(1.0);
+      }
+}
+/*end for css loading animation*/

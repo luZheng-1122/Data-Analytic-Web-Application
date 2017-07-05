@@ -2,13 +2,20 @@
 <html>
 <head>
     <title>DataAnalytic</title>
-    <link rel='stylesheet' href='/stylesheets/DataAnalyticMainPage.css' />
+    <!--external style-->
+    <link rel='stylesheet' href='/stylesheets/external/datatable.min.css' />
+    <link rel="stylesheet" href="/stylesheets/external/datatable.select.min.css"/>
+    <!--main page-->
+    <link rel='stylesheet' href='/stylesheets/DataAnalyticMain.css' />
+    <!--components css-->
+    <link rel='stylesheet' href='/stylesheets/components/left_overall.css' />
+    <link rel='stylesheet' href='/stylesheets/components/right_overall.css' />
 </head>
 <body>
 
 <header>
     <h1>Data Analytic Web Application</h1>
-    <p>Lu Zheng</p>
+    <p><%= author %></p>
     <nav>
         <a id="overPageTag" class="current" href="javascript:;">Overall analysis</a>
         <a id="indiPageTag" href="javascript:;">Article analysis</a>
@@ -17,8 +24,18 @@
 
 <section id="mainBody">
 
-    <section id="left"><%= MostRevArticle._id %></section>
-    <section id="right"></section>
+    <section id="overall">
+
+    </section>
+
+    <section id="individual">
+        <!--for css loading animation-->
+        <div id="Overspinner" class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </section>
 
 </section>
 
@@ -26,5 +43,11 @@
 
 </footer>
 
+<script type="text/javascript" src="/javascripts/external/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="/javascripts/external/ejs_production.js"></script>
+<script type="text/javascript" src="/javascripts/external/echarts.min.js"></script>
+<script type="text/javascript" src="/javascripts/external/datatable.min.js"></script>
+<script type="text/javascript" src="/javascripts/external/datatable.select.min.js"></script>
+<script type="text/javascript" src="/javascripts/DataAnalyticMain.js"></script>
 </body>
 </html>

@@ -1,0 +1,15 @@
+<section id="left_overall" class="left">
+
+    <p>Statistics</p>
+    <ul>
+
+        <li>Most number of revisions: <%= data.MostRevArticle._id %>, number: <%= data.MostRevArticle.count %></li>
+        <li>Last number of revisions: <%= data.LeastRevArticle._id %>, number: <%= data.LeastRevArticle.count %></li>
+        <li>Largest group of registered users: <%= data.LargestGroupArticle._id %>, number: <%= data.LargestGroupArticle.sum %></li>
+        <li>Smallest group of registered users:<%= data.LeastGroupArticle._id %>, number: <%= data.LeastGroupArticle.sum %></li>
+        <li>Longest history: <%= data.LongestRev.title %>, date: <%= data.LongestRev.timestamp %></li>
+        <li>Shortest history: <%= data.ShortestRev._id.title %>, date: <%= data.ShortestRev.timestamp %></li>
+
+    </ul>
+
+</section>

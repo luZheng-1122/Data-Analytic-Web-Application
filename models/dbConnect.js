@@ -7,7 +7,7 @@ var async = require("async");
 
 // mongodb connect
 
-mongoose.connect('mongodb://localhost/WebTut', function () {
+mongoose.connect('mongodb://localhost/WebWiki', function () {
   console.log('mongodb connected')
 });
 
