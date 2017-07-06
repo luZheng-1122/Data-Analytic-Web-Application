@@ -1,0 +1,37 @@
+
+<section id="left_individual" class="left">
+<div id="tableList">
+    <table id="articleTable" class="display" cellspacing="0" width="100%">
+        <thead>
+        <tr>
+            <th>Article</th>
+            <th>Revisions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!--insert articels-->
+        <% for(var i=0; i< articleTable.length; i++) {%>
+        <tr class="articleLink">
+            <td><%= articleTable[i]._id%></td>
+            <td><%= articleTable[i].count%></td>
+        </tr>
+        <% } %>
+        </tbody>
+    </table>
+</div>
+
+<div id="TopFiveText">
+    <p>Top 5 users: </p>
+
+    <!--for css loading animation-->
+    <div id="IndiLeftSpinner" class="spinner IndiSpinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+    </div>
+
+    <ul>
+
+    </ul>
+</div>
+</section>

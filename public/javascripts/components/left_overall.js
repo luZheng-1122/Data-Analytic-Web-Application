@@ -14,8 +14,8 @@ function getData() {
         success: function(data) {
 
             var html = new EJS({url: '/components/left_overall.ejs'}).render({data: data});
-
             $('#overall').append(html);
+            $('#left_overall').show();
         },
         error: function (e) {
             console.log("error log: " + e);

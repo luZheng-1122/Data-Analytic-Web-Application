@@ -1,0 +1,25 @@
+#TopFiveText{
+    margin-top: 25px;
+}
+
+#TopFiveText p{
+    font-size: 20px;
+    margin-bottom: 14px;
+}
+#TopFiveText li {
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.IndiSpinner{
+    display: none;
+}
+
+#IndiCharts{
+    display: none;
+}
+
+#IndiChartBarUserTotal{
+    display: none;
+}

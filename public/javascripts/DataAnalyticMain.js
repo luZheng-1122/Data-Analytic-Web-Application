@@ -16,5 +16,36 @@ window.onload = function () {
         getData();
     });
 
+    $.getScript('/javascripts/components/individual.js', function()
+    {
+        console.log("load left individual");
+        getData();
+    });
+
+    intiPageTag();
+
 }
 
+function intiPageTag() {
+    var OverPageTag = document.getElementById("overPageTag");
+    var IndiPageTag = document.getElementById("indiPageTag");
+    OverPageTag.onclick = OverPageTagclick;
+    IndiPageTag.onclick = IndiPageTagclick;
+}
+
+function OverPageTagclick() {
+
+    $('#indiPageTag').removeClass("current");
+    $('#overPageTag').addClass("current");
+    $('#individual').hide();
+    $('#overall').show();
+
+}
+
+function IndiPageTagclick() {
+
+    $('#overPageTag').removeClass("current");
+    $('#indiPageTag').addClass("current");
+    $('#overall').hide();
+    $('#individual').show();
+}

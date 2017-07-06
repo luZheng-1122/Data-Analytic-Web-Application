@@ -54,15 +54,16 @@ header nav{
 
 /*public style for both overall and individual*/
 .left{
+    display: none;
     width: 40%;
     float: left;
     margin-top: 24px;
     margin-left: 20px;
 }
 .right{
+    display: none;
     width: 50%;
     float: right;
-    margin-right: 50px;
 }
 
 
@@ -77,11 +78,10 @@ header nav{
 .charts{
     width: 50%;
     float: right;
-    margin-right: 50px;
 }
 .charts .tag{
     height: 50px;
-    width: 250px;
+    width: 360px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -118,7 +118,7 @@ header nav{
 
 /*style in footer*/
 footer{
-    position: absolute;
+    /*position: absolute;*/
     bottom: -215px;
     width: 100%;
     height: 180px;

@@ -5,8 +5,8 @@
 function getData() {
 
     var html = new EJS({url: '/components/right_overall.ejs'}).render({});
-
     $('#overall').append(html);
+    $('#right_overall').show();
 
     mouseEvent();
 
