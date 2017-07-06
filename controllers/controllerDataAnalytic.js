@@ -217,8 +217,8 @@ module.exports.GetIndividualData = function (req,res) {
     if (type == 1){
         async.series([
             function (callback) {
-                fs.readFile('/Users/zhenglu/PhpstormProjects/dataAnalyticApp/public/file/admin.txt',
-                    {flag: 'r+', encoding: 'utf8'},
+                fs.readFile('../public/files/admin.txt',
+                    {flag: 'r', encoding: 'utf8'},
                     function (err, data) {
                         if(err) {
                             console.error(err);
@@ -230,8 +230,8 @@ module.exports.GetIndividualData = function (req,res) {
                     });
             },
             function (callback) {
-                fs.readFile('/Users/zhenglu/PhpstormProjects/dataAnalyticApp/public/file/bot.txt',
-                    {flag: 'r+', encoding: 'utf8'},
+                fs.readFile('../public/files/bot.txt',
+                    {flag: 'r', encoding: 'utf8'},
                     function (err, data) {
                         if(err) {
                             console.error(err);

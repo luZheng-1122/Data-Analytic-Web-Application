@@ -86,7 +86,6 @@ function initIndividualTag() {
     InditagBarUserTotal.onmouseenter = IndiUserTotalmouse;
 }
 
-
 //get new revisions from wiki API, data has problems!!
 function queryNewRevisions(articleName,latestTimestamp) {
 
@@ -215,7 +214,6 @@ function IndiUserTotalmouse() {
     $('#IndiChartBar').hide();
     $('#IndiChartBarUserTotal').show();
 }
-
 
 //Echarts
 //http://echarts.baidu.com/gallery/index.html
