@@ -209,7 +209,8 @@ module.exports.GetIndividualData = function (req,res) {
     var title = req.query.title;
     var latestTimestamp = req.query.latestTimestamp;
     var type = req.query.type;
-    var admin,bot;
+    var admin = [];
+    var bot = [];
     var num = 0;
     console.log("getIndividualData"+data[0]);
 
@@ -222,11 +223,12 @@ module.exports.GetIndividualData = function (req,res) {
                     function (err, data) {
                         if(err) {
                             console.error(err);
-                            return;
+                            // return;
                         }
-                        admin = data.split("\\\n");
+                        else{
+                            admin = data.split("\\\n");
+                        }
                         callback(null);
-                        // console.log(admin);
                     });
             },
             function (callback) {
@@ -235,16 +237,16 @@ module.exports.GetIndividualData = function (req,res) {
                     function (err, data) {
                         if(err) {
                             console.error(err);
-                            return;
+                            // return;
                         }
-                        bot = data.split("\\\n");
-                        // console.log(bot);
+                        else{
+                            bot = data.split("\\\n");
+                        }
                         callback(null);
                     });
             },
         ],function () {
             async.forEachOfSeries(data, iterateeInsertAPI, function () {
-                // console.log(data.length-1 +" revisions have been inserted!");
                 getNewRevisions(title, res);
             });
         });
